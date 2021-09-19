@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #f0f2f2;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.Telegram-Branding-Concept-1-hex {
+  color: #076df2;
+}
+.Telegram-Branding-Concept-2-hex {
+  color: #0583f2;
+}
+.Telegram-Branding-Concept-3-hex {
+  color: #044d8c;
+}
+.Telegram-Branding-Concept-4-hex {
+  color: #031926;
+}
+.Telegram-Branding-Concept-5-hex {
+  color: #f0f2f2;
+}
+
+body {
+  background: #031926;
+  color: #f0f2f2;
+  font: 400 1.6rem 'Nunito', sans-serif;
+}
