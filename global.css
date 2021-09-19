@@ -17,6 +17,7 @@ input,
 textarea {
   outline: none;
   border: none;
+  font-family: 'Nunito', sans-serif;
 }
 
 a {

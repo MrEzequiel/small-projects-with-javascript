@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Button Maker</title>
+  </head>
+  <body>
+    <h2>Button Maker</h2>
+    <section class="button-maker">
+      <form id="controls">
+        <label for="text">Text</label>
+        <input type="text" id="text" name="text" value="Click" />
+
+        <label for="color">Color</label>
+        <input type="color" name="color" id="color" value="#031926" />
+
+        <label for="backgroundColor">Background Color</label>
+        <input
+          type="color"
+          name="backgroundColor"
+          id="backgroundColor"
+          value="#0583f2"
+        />
+
+        <label for="height">Height</label>
+        <input
+          type="range"
+          name="height"
+          id="height"
+          min="0"
+          max="200"
+          value="50"
+        />
+
+        <label for="width">Width</label>
+        <input
+          type="range"
+          name="width"
+          id="width"
+          min="0"
+          max="600"
+          value="100"
+        />
+
+        <label for="border">Border</label>
+        <input
+          type="text"
+          name="border"
+          id="border"
+          value="2px solid #f0f2f2"
+        />
+
+        <label for="borderRadius">Border Radius</label>
+        <input
+          type="range"
+          name="borderRadius"
+          id="borderRadius"
+          min="0"
+          max="50"
+          value="5"
+        />
+
+        <select name="fontFamily" id="fontFamily">
+          <option value="sans-serif">Sans Serif</option>
+          <option value="serif">Serif</option>
+          <option value="monospace">Monospace</option>
+          <option value="cursive">Cursive</option>
+        </select>
+
+        <label for="fontSize">Font Size</label>
+        <input type="number" name="fontSize" id="fontSize" value="24" />
+      </form>
+
+      <section class="result">
+        <div class="container-button">
+          <button class="button">Click</button>
+        </div>
+        <pre><code class="css-result"></code>
+          <img class="copy" src="./assets/copy.svg" >
+          <p class="animation-copy">Copied to your clipboard &#128504;</p>
+        </pre>
+      </section>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

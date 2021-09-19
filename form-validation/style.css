@@ -1,0 +1,65 @@
+@import '../global.css';
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#form {
+  width: min(300px, 90%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#form input,
+#form textarea {
+  background: #076df2;
+  width: 100%;
+
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  color: #f0f2f2;
+  border: 3px solid #f0f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+
+  transition: box-shadow 500ms;
+}
+
+#form input:focus,
+#form textarea:focus {
+  box-shadow: none;
+}
+
+#form textarea {
+  resize: none;
+  height: 150px;
+}
+
+#form label {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+#form button {
+  cursor: pointer;
+  display: block;
+  width: 125px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  background: none;
+  border: 3px solid #076df2;
+  border-radius: 5px;
+  color: #f0f2f2;
+  font-size: 2rem;
+  font-weight: bold;
+
+  transition: background 300ms ease-in-out;
+}
+
+#form button:hover {
+  background: #076df2;
+}

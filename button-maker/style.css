@@ -1,0 +1,250 @@
+@import '../global.css';
+
+h2 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.button-maker {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  max-width: 960px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+
+  background: #042a41;
+  box-shadow: 4px 5px 11px 1px rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+
+#controls label {
+  width: max-content;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+#controls input,
+#controls select {
+  margin-bottom: 2rem;
+}
+
+#controls input[type='text'],
+#controls input[type='number'] {
+  background-color: #031926;
+  border: 2px solid #044d8c;
+  color: #f0f2f2;
+
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.6rem;
+}
+
+#controls input[type='number'] {
+  width: 50%;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type='range'] {
+  width: 100%;
+  height: 1.5rem;
+  background: #031926;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #0583f2;
+  cursor: pointer;
+  border: 4px solid #042a41;
+  box-shadow: -407px 0 0 400px #0583f2;
+}
+
+#controls select {
+  width: 100%;
+  outline: none;
+  background-color: #031926;
+  border: 2px solid #0583f2;
+  border-radius: 5px;
+  color: #f0f2f2;
+  font-size: 1.6rem;
+  padding: 0.25rem 0.5rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+input[type='color'] {
+  cursor: pointer;
+  border-radius: 5px;
+}
+input[type='color']::-webkit-color-swatch {
+  border-radius: 5px;
+}
+
+.result {
+  width: 100%;
+  height: 100%;
+  border: 5px solid #0583f2;
+  box-shadow: 4px 5px 11px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.result .container-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.result .button {
+  cursor: pointer;
+  background: #0583f2;
+  color: #031926;
+  border: 2px solid #f0f2f2;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 24px;
+
+  transition: all 300ms ease-in-out;
+}
+
+.result pre {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 250px;
+  background: #f0f2f2;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px -5px 16px 4px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+}
+
+.result .css-result {
+  font-family: 'PT Mono', monospace;
+  color: #031926;
+}
+
+.css-result span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.css-result span strong {
+  color: #044d8c;
+}
+
+.result .copy {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #031926;
+  padding: 0.5rem;
+  border-radius: 5px;
+
+  transition: transform 500ms ease, box-shadow 500ms;
+}
+
+.result .copy:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, -30px, 0);
+  }
+}
+@keyframes show-down {
+  from {
+    opacity: 1;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.result .animation-copy {
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+  background: #044d8c;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: 3px solid #031926;
+  box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.6);
+  bottom: 10px;
+  right: 5px;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.result .animation-copy.active.remove-animation {
+  animation: show-down 800ms forwards ease;
+}
+
+.result .animation-copy.active {
+  visibility: visible;
+  opacity: 1;
+  animation: show-up 800ms forwards ease;
+}
+
+@media (max-width: 860px) {
+  .button-maker {
+    grid-template-columns: 1fr;
+  }
+}
