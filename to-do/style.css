@@ -1,0 +1,165 @@
+@import '../global.css';
+
+::selection {
+  background: #f0f2f2;
+  color: #031926;
+}
+
+#to-do {
+  width: min(960px, 90%);
+  margin: 0 auto;
+}
+
+#to-do h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 5rem;
+}
+
+#add-to-do {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  background: #044d8c;
+  border: 2px solid #f0f2f2;
+  box-shadow: 0px 0px 11px 9px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  gap: 1rem;
+
+  padding: 0;
+
+  transition: box-shadow 500ms, transform 500ms;
+}
+
+#add-to-do:hover {
+  transform: scale(0.99);
+  box-shadow: none;
+}
+
+#add-to-do #add {
+  background: transparent;
+  width: 90%;
+  border-radius: 5px;
+
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  color: #f0f2f2;
+}
+
+#add::placeholder {
+  color: #f0f2f2;
+}
+
+#add-to-do #button-add {
+  cursor: pointer;
+  background: transparent;
+  width: 30px;
+  height: 100%;
+}
+
+#button-add span {
+  font-size: 3rem;
+  color: #f0f2f2;
+}
+
+.to-do-list {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do-container {
+  width: 100%;
+  min-height: 50px;
+  display: grid;
+  grid-template-columns: 25px 1fr 50px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
+
+  word-break: break-all;
+
+  background: #044d8c;
+  border-bottom: 5px solid #076df2;
+  border-radius: 5px;
+}
+
+.label-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: #0583f2;
+
+  transition: background-color 200ms;
+}
+
+.label-checkbox:hover input ~ .checkmark {
+  background-color: #076df2;
+}
+
+.label-checkbox input:checked ~ .checkmark {
+  background-color: #031926;
+}
+
+.checkmark:after {
+  content: '\2713';
+  position: absolute;
+  top: -15%;
+  right: 15%;
+  display: none;
+}
+
+.label-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.to-do-text {
+  font-size: 2rem;
+  outline: none;
+}
+.to-do-text.marked {
+  text-decoration: line-through;
+}
+
+.to-do-container button {
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: #031926;
+  justify-self: flex-end;
+}
+.to-do-container button span {
+  color: #f0f2f2;
+  font-size: 2rem;
+}

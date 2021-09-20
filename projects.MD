@@ -1,6 +1,7 @@
-- Cronômetro
+- Stopwatch
 - Tic-Tac-Toe
 - To-do List
 - Grab and Drop
 - Form validation
 - Button Maker
+- Calculator
