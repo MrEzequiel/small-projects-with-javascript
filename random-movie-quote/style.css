@@ -1,0 +1,45 @@
+@import '../global.css';
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
+
+  height: 100vh;
+}
+
+.quote {
+  max-width: 550px;
+  font-size: 2.4rem;
+  background: #044d8c;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
+
+  border-radius: 0.5rem;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.quote .author {
+  font-style: normal;
+  font-size: 2rem;
+  font-family: 'PT Mono', monospace;
+}
+
+.generate {
+  cursor: pointer;
+  background: #076df2;
+  width: 100px;
+  height: 50px;
+
+  color: #f0f2f2;
+  font-size: 1.6rem;
+
+  border-radius: 0.5rem;
+  border: 0.3rem solid #0583f2;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
