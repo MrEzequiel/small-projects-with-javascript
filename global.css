@@ -34,6 +34,11 @@ ul {
   font-size: 62.5%;
 }
 
+::selection {
+  background: #f0f2f2;
+  color: #031926;
+}
+
 .Telegram-Branding-Concept-1-hex {
   color: #076df2;
 }

@@ -1,10 +1,5 @@
 @import '../global.css';
 
-::selection {
-  background: #f0f2f2;
-  color: #031926;
-}
-
 #to-do {
   width: min(960px, 90%);
   margin: 0 auto;
