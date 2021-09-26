@@ -1,0 +1,87 @@
+@import '../global.css';
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.tic-tac-toe {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tic-tac-toe > div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 125px;
+
+  border-radius: 0.5rem;
+  font-size: 4.5rem;
+  text-shadow: 0px 0px 7px black;
+  transition: background 200ms;
+}
+
+.tic-tac-toe > div:hover {
+  background: #044d8c1f;
+}
+
+[data-position='a2'],
+[data-position='c2'] {
+  border: 0.2rem solid #076df2;
+  border-top: none;
+  border-bottom: none;
+}
+
+[data-position='b1'],
+[data-position='b3'] {
+  border-top: 0.2rem solid #076df2;
+  border-bottom: 0.2rem solid #076df2;
+}
+
+[data-position='b2'] {
+  border: 0.2rem solid #076df2;
+}
+
+.game {
+  background: #044d8c;
+  box-shadow: 0 0 8px 6px rgba(0, 0, 0, 0.2);
+  border: 0.2rem solid #f0f2f2;
+  padding: 2rem;
+
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'PT Mono', monospace;
+}
+.game p:first-child {
+  margin-bottom: 2rem;
+}
+
+.game span {
+  display: inline-block;
+  background: #031926;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  transition: transform 500ms ease-in-out;
+}
+
+.result.winner {
+  background: #f0f2f2;
+  color: #044d8c;
+  transform: scale(1.3);
+}
+
+button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #031926;
+  font-size: 2rem;
+}
