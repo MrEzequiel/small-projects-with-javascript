@@ -1,0 +1,52 @@
+@import '../global.css';
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.items {
+  width: 500px;
+  min-height: 100px;
+  background: #053049;
+  border: 0.1rem solid #044d8c;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  transition: background 200ms;
+}
+
+.items.hover {
+  background: #044d8c;
+}
+
+.container-items {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.items-grab {
+  user-select: none;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  width: 75px;
+  height: 75px;
+  background: #0583f2;
+}
+
+.items-grab img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
