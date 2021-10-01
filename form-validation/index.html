@@ -8,15 +8,64 @@
     <title>Form Validation</title>
   </head>
   <body>
+    <div class="sent">
+      <h1>Sent!</h1>
+    </div>
     <form name="form" id="form">
       <label for="name">Name</label>
-      <input type="text" name="name" id="name" required />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Your Name"
+        required
+      />
 
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" required />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="exemple@gmail.com"
+        required
+      />
 
-      <label for="message">Message</label>
-      <textarea name="message" id="message" required></textarea>
+      <label for="cep">CEP</label>
+      <input
+        type="text"
+        name="cep"
+        id="cep"
+        required
+        placeholder="00000-000"
+        required
+      />
+
+      <label for="cpf">CPF</label>
+      <input
+        type="text"
+        name="cpf"
+        id="cpf"
+        placeholder="000.000.000-00"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Your password"
+        maxlength="20"
+        minlength="6"
+        required
+      />
+
+      <ul class="obligations">
+        <li>Between 6 and 20 characters</li>
+        <li>Minimum 1 lowercase</li>
+        <li>Minimum 1 uppercase</li>
+        <li>Minimum 1 special character (%, @, #, *)</li>
+      </ul>
 
       <button type="submit" name="submit" id="submit">Submit</button>
     </form>

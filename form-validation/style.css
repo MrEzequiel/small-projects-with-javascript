@@ -7,15 +7,31 @@ body {
   height: 100vh;
 }
 
+.sent {
+  display: none;
+}
+
+.sent h1 {
+  font-size: 5rem;
+}
+
+.send .sent {
+  display: block;
+}
+
 #form {
-  width: min(300px, 90%);
+  width: min(400px, 90%);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 1rem 0;
 }
 
-#form input,
-#form textarea {
+.send #form {
+  display: none;
+}
+
+#form input {
   background: #076df2;
   width: 100%;
 
@@ -29,19 +45,18 @@ body {
   transition: box-shadow 500ms;
 }
 
-#form input:focus,
-#form textarea:focus {
+#form input:focus {
   box-shadow: none;
 }
 
-#form textarea {
-  resize: none;
-  height: 150px;
+#form input::placeholder {
+  color: #f0f2f2a6;
 }
 
 #form label {
   font-size: 2rem;
   margin-top: 2rem;
+  max-width: max-content;
 }
 
 #form button {
@@ -62,4 +77,60 @@ body {
 
 #form button:hover {
   background: #076df2;
+}
+
+@keyframes show-up {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 10rem;
+  }
+}
+
+@keyframes disappear {
+  from {
+    max-height: 10rem;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+#form .error {
+  color: #ff9494;
+  animation: show-up 500ms forwards ease-in-out;
+}
+
+#form .error.disappear {
+  animation: disappear 500ms forwards ease-in-out;
+}
+
+.obligations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.obligations li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.obligations li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff9494;
+  transition: background 500ms;
+}
+
+.obligations li.check::before {
+  background: #4bb543;
 }
